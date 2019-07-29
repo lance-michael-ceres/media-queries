@@ -1,34 +1,76 @@
-body{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+
+
+
+
+.alert-info {
+    margin-left: 1.5em;
+    grid-column: 3/4;
+    grid-row: 4/5;
+    display: none;
 }
 
-.alert-info a{
-    text-decoration: none;
-    color: black;
-    display: inline-block;
-    background-color: #CCFFFF;
-    border: 1px solid lightgray;
-    padding: .5em 5em;
+h1 {
+    margin-left: .5em;
+    padding: 0;
+    grid-column: 2 / 3;
 }
 
-@media screen and (min-width:768px) {
-    selector {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
+
+.header-img {
+    grid-column: 1/5;
+    grid-row: 2/3;
+    margin-left: 20em;
+
+
 }
 
-.nav-links a{
-    background-color: #CCCCCC;
-    display: inline-block;
-    padding: 10px 20px;
+#main {
+
+    margin: 1.5em;
+    grid-column: 1/4;
+    grid-row: 3/4;
+
 }
 
-ul li{
+.sub-section {
+    margin: 1.5em;
+    grid-column: 4/5 ;
+    grid-row: 3/4;
+}
+
+footer {
+    margin-left: 1.5em;
+    grid-column: 1/2;
+    grid-row: 4/5;
+}
+
+nav,ul, li {
+    grid-column: 4/5;
+    grid-row: 1/2;
     list-style: none;
-    padding: 10px;
+    display: inline-block;
+    word-spacing: 2em;
+    padding: 0;
+}
+
+#social-media-links {
+    grid-column: 4/5;
+    grid-row: 4/5;
+}
+
+
+
+/* screen sizes 500px and up */
+@media screen and (min-width:385px) {
+
+    body {
+        display: grid;
+        height: 100vh;
+        width: 100%;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        background-color: white;
+        grid-gap: .4em;
+        margin: 0;
+    }
 }
